@@ -561,9 +561,13 @@
                             </div>
                             <h2 class="book-title">${book.title}</h2>
                             <div class="book-category">${book.category}</div>
+                            ${book.author ? `<div class="book-meta">Autor: ${book.author}</div>` : ''}
+                            ${book.publisher ? `<div class="book-meta">Vydavatel: ${book.publisher}</div>` : ''}
+                            ${book.year ? `<div class="book-meta">Rok: ${book.year}</div>` : ''}
+                            ${book.pages ? `<div class="book-meta">Počet stran: ${book.pages}</div>` : ''}
                             ${book.description && !isListView ? 
                                 `<div class="book-description">${book.description.substring(0, 100)}...</div>` : ''}
-                            <div class="book-meta">
+                            <div class="book-meta" style="margin-top: 0.5rem;">
                                 <span class="book-price">${book.price} Kč</span>
                                 <span class="book-condition">${book.conditionDesc}</span>
                             </div>
